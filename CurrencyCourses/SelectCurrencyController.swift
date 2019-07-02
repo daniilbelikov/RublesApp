@@ -2,7 +2,7 @@
 //  SelectCurrencyController.swift
 //  CurrencyCourses
 //
-//  Created by Daniil Belikov on 14/06/2019.
+//  Created by Daniil Belikov on 02/07/2019.
 //  Copyright © 2019 Daniil Belikov. All rights reserved.
 //
 
