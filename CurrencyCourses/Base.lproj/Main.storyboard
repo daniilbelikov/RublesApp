@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NNt-Bl-9Z2">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -33,11 +33,11 @@
             <objects>
                 <viewController id="K4p-sm-A2g" customClass="ConverterController" customModule="CurrencyCourses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hpW-vj-XbX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="4Uw-6R-Jpy">
-                                <rect key="frame" x="17" y="74" width="286" height="162"/>
+                                <rect key="frame" x="44.5" y="167.5" width="286" height="162"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курсы на дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Woq-3c-Hdx">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="34"/>
@@ -117,7 +117,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Нажмите на RUR, чтобы выбрать валюту." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-3E-r6d">
-                                <rect key="frame" x="12" y="258" width="296" height="14"/>
+                                <rect key="frame" x="12" y="351.5" width="351" height="14"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -144,28 +144,28 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PB6-jn-PpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <barButtonItem style="done" systemItem="done" id="iIk-bh-JhE">
+                <barButtonItem title="Готово" style="done" id="iIk-bh-JhE">
                     <connections>
                         <action selector="pushDoneAction:" destination="K4p-sm-A2g" id="Gog-9B-5w2"/>
                     </connections>
                 </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="1338.75" y="463.75"/>
+            <point key="canvasLocation" x="1340" y="466"/>
         </scene>
         <!--Выберите валюту-->
         <scene sceneID="nve-Ze-KUi">
             <objects>
                 <tableViewController id="XMd-IV-d6D" customClass="SelectCurrencyController" customModule="CurrencyCourses" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ANl-vE-QV6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="54" id="2RF-70-2NM">
-                                <rect key="frame" x="0.0" y="28" width="320" height="54"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2RF-70-2NM" id="NDY-ix-i3C">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -176,7 +176,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Выберите валюту" id="2ZH-xV-KZi">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hd5-aC-JFF">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="Hd5-aC-JFF">
                             <connections>
                                 <action selector="pushCancelAction:" destination="XMd-IV-d6D" id="Ch7-Di-eIQ"/>
                             </connections>
@@ -185,14 +185,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZX-RC-UVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3086.9565217391305" y="471.42857142857139"/>
+            <point key="canvasLocation" x="2982" y="466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V1e-CW-M21">
             <objects>
                 <navigationController storyboardIdentifier="selectedCurrencyNSID" id="8Wk-kt-Xr4" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HF2-6w-HLB">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -201,18 +201,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcP-yb-efU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="472"/>
+            <point key="canvasLocation" x="2153" y="466"/>
         </scene>
         <!--Выберите дату-->
         <scene sceneID="Dz2-G3-RRl">
             <objects>
                 <viewController id="xvE-2W-mjw" customClass="SettingsController" customModule="CurrencyCourses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4Q-Kf-fmd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="WEK-sI-bj9">
-                                <rect key="frame" x="0.0" y="103.5" width="320" height="273"/>
+                                <rect key="frame" x="27.5" y="197" width="320" height="273"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HWn-RD-hAG">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
@@ -239,7 +239,7 @@
                         <viewLayoutGuide key="safeArea" id="pfl-1g-fCk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Выберите дату" id="j3j-6g-gxz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CRf-An-eT2">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="CRf-An-eT2">
                             <connections>
                                 <action selector="pushCancelAction:" destination="xvE-2W-mjw" id="Czd-7A-Yu4"/>
                             </connections>
@@ -251,22 +251,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fez-2e-jHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281.875" y="-916.25"/>
+            <point key="canvasLocation" x="2153" y="-917"/>
         </scene>
         <!--Курсы валют-->
         <scene sceneID="4g8-qe-9bk">
             <objects>
                 <tableViewController id="bKI-qU-rXH" customClass="CoursesController" customModule="CurrencyCourses" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qos-zA-tf1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="48" id="Ow9-9x-f1w" customClass="CoursesCell" customModule="CurrencyCourses" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="48"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ow9-9x-f1w" id="pVk-7R-cej">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="47.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wEW-Md-CsE">
@@ -277,7 +277,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курс" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuV-lD-jaV">
-                                            <rect key="frame" x="220" y="10" width="80" height="30"/>
+                                            <rect key="frame" x="275" y="10" width="80" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="Sj4-xC-Iur"/>
                                                 <constraint firstAttribute="height" constant="30" id="gob-ef-Bgg"/>
@@ -287,7 +287,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование валюты" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wA-xX-mVl">
-                                            <rect key="frame" x="91" y="10" width="121" height="30"/>
+                                            <rect key="frame" x="91" y="10" width="176" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="4fB-hh-DvN"/>
                                             </constraints>
@@ -320,7 +320,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Курсы валют" id="18N-Ou-WZo">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="JSb-CH-8uT">
+                        <barButtonItem key="leftBarButtonItem" title="Настроить" id="JSb-CH-8uT">
                             <connections>
                                 <segue destination="hWd-hf-j0W" kind="presentation" id="fRH-RZ-htO"/>
                             </connections>
@@ -334,7 +334,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkn-CD-Jdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340.625" y="-217.5"/>
+            <point key="canvasLocation" x="1340" y="-216"/>
         </scene>
         <!--Курсы ЦБ РФ-->
         <scene sceneID="EOd-c6-5T4">
@@ -343,7 +343,7 @@
                     <tabBarItem key="tabBarItem" title="Курсы ЦБ РФ" image="tab1" id="YZ7-TO-lE7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lws-RT-QKT">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -362,7 +362,7 @@
                     <tabBarItem key="tabBarItem" title="Конвертер" image="tab2" id="DJj-sO-cjV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gpD-6b-Eaw">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -380,7 +380,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hWd-hf-j0W" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7FC-c2-ZQE">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -390,7 +390,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7l-GG-hi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344.8" y="-915.29235382308855"/>
+            <point key="canvasLocation" x="1340" y="-917"/>
         </scene>
     </scenes>
     <resources>

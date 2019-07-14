@@ -2,7 +2,7 @@
 //  ConverterController.swift
 //  CurrencyCourses
 //
-//  Created by Daniil Belikov on 02/07/2019.
+//  Created by Alexander Senin & Daniil Belikov on 12/07/2019.
 //  Copyright © 2019 Daniil Belikov. All rights reserved.
 //
 
