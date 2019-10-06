@@ -5,5 +5,5 @@ If you find a bug in this application, please write to pvt.belikov@gmail.com
 
 **Screenshots**
 
-<img src="./assets/main.png" width="300" /> <img src="./assets/date.png" width="300" /> <img src="./assets/converter.png" width="300"/>
+<img src="./assets/main.png" width="280" /> <img src="./assets/date.png" width="280" /> <img src="./assets/converter.png" width="280"/>
 
