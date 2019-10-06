@@ -3,7 +3,7 @@ Rubles is a simple and quick application with current exchange rates from the Ce
 
 If you find a bug in this application, please write to pvt.belikov@gmail.com
 
-**Screenshots**
+**Screenshots:**
 
-<img src="./assets/main.png" width="280" /> <img src="./assets/date.png" width="280" /> <img src="./assets/converter.png" width="280"/>
+<img src="./assets/main.png" width="285" /> <img src="./assets/date.png" width="285" /> <img src="./assets/converter.png" width="285"/>
 
