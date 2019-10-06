@@ -5,7 +5,6 @@
 //  Created by Alexander Senin & Daniil Belikov on 01/10/2019.
 //  Copyright © 2019 GolDuck development. All rights reserved.
 //
-//
 
 import UIKit
 
