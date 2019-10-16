@@ -43,9 +43,6 @@ class CourseController: UITableViewController {
             }
         }
         navigationItem.title = Model.shared.currentDate
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         Model.shared.loadXMLFile(date: nil)
     }
     
