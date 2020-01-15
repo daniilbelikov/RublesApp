@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0C636323CF6D6800734A71 /* Rubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C636223CF6D6800734A71 /* Rubles.swift */; };
 		6BA357BE22A820AA00F2436A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA357BD22A820AA00F2436A /* AppDelegate.swift */; };
 		6BA357C322A820AA00F2436A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA357C122A820AA00F2436A /* Main.storyboard */; };
 		6BA357C822A820B100F2436A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA357C622A820B100F2436A /* LaunchScreen.storyboard */; };
 		6BA357D022A8212B00F2436A /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6BA357CF22A8212B00F2436A /* data.xml */; };
-		6BA357D222A8217A00F2436A /* ModelRubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA357D122A8217A00F2436A /* ModelRubles.swift */; };
+		6BA357D222A8217A00F2436A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA357D122A8217A00F2436A /* Model.swift */; };
 		6BA357D422AE44E100F2436A /* CourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA357D322AE44E100F2436A /* CourseController.swift */; };
 		6BA357D822B10BA100F2436A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA357D722B10BA100F2436A /* SettingsController.swift */; };
 		6BA357DA22B286AF00F2436A /* ConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA357D922B286AF00F2436A /* ConverterController.swift */; };
@@ -63,13 +64,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B0C636223CF6D6800734A71 /* Rubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubles.swift; sourceTree = "<group>"; };
 		6BA357BA22A820AA00F2436A /* Rubles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rubles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA357BD22A820AA00F2436A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BA357C222A820AA00F2436A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BA357C722A820B100F2436A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BA357C922A820B100F2436A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BA357CF22A8212B00F2436A /* data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data.xml; sourceTree = "<group>"; };
-		6BA357D122A8217A00F2436A /* ModelRubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRubles.swift; sourceTree = "<group>"; };
+		6BA357D122A8217A00F2436A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6BA357D322AE44E100F2436A /* CourseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseController.swift; sourceTree = "<group>"; };
 		6BA357D722B10BA100F2436A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		6BA357D922B286AF00F2436A /* ConverterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0C636423CF7BF300734A71 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6BA357BD22A820AA00F2436A /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		6B4C1CC12349D7E000B3638C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		6BA357BC22A820AA00F2436A /* Rubles */ = {
 			isa = PBXGroup;
 			children = (
+				6B0C636423CF7BF300734A71 /* AppDelegate */,
 				6BFE8A7C233A7A0F00316F10 /* Model */,
 				6BFE8A7D233A7A2800316F10 /* View */,
 				6BFE8A7E233A7A3600316F10 /* Controller */,
@@ -221,7 +232,8 @@
 		6BFE8A7C233A7A0F00316F10 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6BA357D122A8217A00F2436A /* ModelRubles.swift */,
+				6B0C636223CF6D6800734A71 /* Rubles.swift */,
+				6BA357D122A8217A00F2436A /* Model.swift */,
 				6BA357DF22B7767A00F2436A /* CourseCell.swift */,
 			);
 			path = Model;
@@ -239,7 +251,6 @@
 		6BFE8A7E233A7A3600316F10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6BA357BD22A820AA00F2436A /* AppDelegate.swift */,
 				6BA357D922B286AF00F2436A /* ConverterController.swift */,
 				6BA357DB22B3951F00F2436A /* SelectCurrencyController.swift */,
 				6BA357D322AE44E100F2436A /* CourseController.swift */,
@@ -365,10 +376,11 @@
 				6BA357D822B10BA100F2436A /* SettingsController.swift in Sources */,
 				6BA357D422AE44E100F2436A /* CourseController.swift in Sources */,
 				6BA357DC22B3951F00F2436A /* SelectCurrencyController.swift in Sources */,
-				6BA357D222A8217A00F2436A /* ModelRubles.swift in Sources */,
+				6BA357D222A8217A00F2436A /* Model.swift in Sources */,
 				6BA357E022B7767A00F2436A /* CourseCell.swift in Sources */,
 				6BA357BE22A820AA00F2436A /* AppDelegate.swift in Sources */,
 				6BA357DA22B286AF00F2436A /* ConverterController.swift in Sources */,
+				6B0C636323CF6D6800734A71 /* Rubles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = NPAVBCC9N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Rubles/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -536,7 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = NPAVBCC9N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Rubles/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

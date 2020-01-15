@@ -1,62 +1,27 @@
 //
-//  ModelRubles.swift
+//  Model.swift
 //  Rubles: exchange rates
 //
 //  Created by Alexander Senin & Daniil Belikov on 01/10/2019.
 //  Copyright © 2019 Daniil Belikov. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class Rubles {
-    var numCode: String?
-    var charCode: String?
+class Model: NSObject {
     
-    var nominal: String?
-    var nominalDouble: Double?
-    
-    var name: String?
-    
-    var value: String?
-    var valueDouble: Double?
-    
-    var imageFlag: UIImage? {
-        if let charcodeOne = charCode {
-            return UIImage(named: charcodeOne + ".png")
-        }
-        return nil
-    }
-    
-    class func ruble() -> Rubles {
-        let ruble = Rubles()
-        ruble.charCode = "RUR"
-        ruble.name = "Российский рубль"
-        ruble.nominal = "1"
-        ruble.nominalDouble = 1.0
-        ruble.value = "1"
-        ruble.valueDouble = 1.0
-        return ruble
-    }
-}
-
-class Model: NSObject, XMLParserDelegate {
+    // MARK: - Properties
     static let shared = Model()
     
     var currencies: [Rubles] = []
     var currentDate: String = ""
     
-    var fromCurrency: Rubles = Rubles.ruble()
-    var toCurrency: Rubles = Rubles.ruble()
+    var fromCurrency: Rubles = Rubles.myRuble()
+    var toCurrency: Rubles = Rubles.myRuble()
     
-    func convert(amount: Double?) -> String {
-        if amount == nil {
-            return ""
-        }
-        
-        let result = ((fromCurrency.nominalDouble! * fromCurrency.valueDouble!) / (toCurrency.valueDouble! / toCurrency.nominalDouble!)) * amount!
-        
-        return String(round(result * 1000) / 1000)
-    }
+    var currentCharacters: String = ""
+    var currentCurrency: Rubles?
     
     var pathForXML: String {
         let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]+"/data.xml"
@@ -71,8 +36,19 @@ class Model: NSObject, XMLParserDelegate {
         return URL(fileURLWithPath: pathForXML)
     }
     
-    func loadXMLFile(date: Date?) {
+    // MARK: - General methods
+    
+    func convert(amount: Double?) -> String {
+        if amount == nil {
+            return ""
+        }
+        let result = ((fromCurrency.nominalDouble! * fromCurrency.valueDouble!) /
+            (toCurrency.valueDouble! / toCurrency.nominalDouble!)) * amount!
         
+        return String(round(result * 1000) / 1000)
+    }
+    
+    func loadXMLFile(date: Date?) {
         var stringURL = "http://www.cbr.ru/scripts/XML_daily.asp?date_req="
         
         if date != nil {
@@ -87,7 +63,6 @@ class Model: NSObject, XMLParserDelegate {
             var errorGlobal: String?
             
             if error == nil {
-                
                 let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]+"/data.xml"
                 
                 let urlForSave = URL(fileURLWithPath: path)
@@ -115,7 +90,8 @@ class Model: NSObject, XMLParserDelegate {
     }
     
     func parseXML() {
-        currencies = [Rubles.ruble()]
+        currencies = [Rubles.myRuble()]
+        
         let parser = XMLParser(contentsOf: urlForXML)
         parser?.delegate = self
         parser?.parse()
@@ -132,12 +108,16 @@ class Model: NSObject, XMLParserDelegate {
             }
         }
     }
-    
-    var currentCurrency: Rubles?
+}
+
+// MARK: - Extension
+
+extension Model: XMLParserDelegate {
     
     func parser(_ parser: XMLParser,
                 didStartElement elementName: String,
-                namespaceURI: String?, qualifiedName qName: String?,
+                namespaceURI: String?,
+                qualifiedName qName: String?,
                 attributes attributeDict: [String : String] = [:]) {
         
         if elementName == "ValCurs" {
@@ -151,14 +131,7 @@ class Model: NSObject, XMLParserDelegate {
         }
     }
     
-    var currentCharacters: String = ""
-    
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        currentCharacters = string
-    }
-    
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        
         if elementName == "NumCode" {
             currentCurrency?.numCode = currentCharacters
         }
@@ -184,5 +157,9 @@ class Model: NSObject, XMLParserDelegate {
         if elementName == "Valute" {
             currencies.append(currentCurrency!)
         }
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        currentCharacters = string
     }
 }

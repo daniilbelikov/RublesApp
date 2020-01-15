@@ -6,13 +6,18 @@
 //  Copyright © 2019 Daniil Belikov. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class CourseCell: UITableViewCell {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var imageFlag: UIImageView!
     @IBOutlet weak var labelCurrencyName: UILabel!
     @IBOutlet weak var labelCourse: UILabel!
+    
+    // MARK: - General methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +30,7 @@ class CourseCell: UITableViewCell {
     func initCell(currency: Rubles) {
         let labelCourseText = currency.valueDouble! / currency.nominalDouble!
         let transition = labelCourseText
+        
         imageFlag.image = currency.imageFlag
         labelCurrencyName.text = currency.name
         labelCourse.text = String(round(transition * 1000) / 1000)
