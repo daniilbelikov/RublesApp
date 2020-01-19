@@ -10,6 +10,8 @@ import UIKit
 
 class ConverterController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var labelCoursesForDate: UILabel!
     @IBOutlet weak var buttonDone: UIBarButtonItem!
     
@@ -19,15 +21,48 @@ class ConverterController: UIViewController {
     @IBOutlet weak var textFrom: UITextField!
     @IBOutlet weak var textTo: UITextField!
     
+    // MARK: - General methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFrom.delegate = self
+        
+        self.textFrom.addDoneButton(title: "Готово",
+                                    target: self,
+                                    selector: #selector(tapDone(sender:)))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshButton()
+        configureAll()
+        textFromEditingChange(self)
+    }
+    
+    @objc func tapDone(sender: Any) {
+        self.view.endEditing(true)
+    }
+    
+    private func refreshButton() {
+        buttonFrom.setTitle(Model.shared.fromCurrency.charCode, for: .normal)
+        buttonTo.setTitle(Model.shared.toCurrency.charCode, for: .normal)
+    }
+    
+    private func configureAll() {
+        labelCoursesForDate.text = "Курсы на \(Model.shared.currentDate)"
+        navigationItem.rightBarButtonItem = nil
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func textFromEditingChange(_ sender: Any) {
+        let amount = Double(textFrom.text!)
+        textTo.text = Model.shared.convert(amount: amount)
     }
     
     @IBAction func pushFromAction(_ sender: Any) {
         let newController = storyboard?.instantiateViewController(withIdentifier: "selectedCurrencyNSID") as! UINavigationController
         (newController.viewControllers[0] as! SelectCurrencyController).flagCurrency = .from
         newController.modalPresentationStyle = .fullScreen
+        
         present(newController, animated: true)
     }
     
@@ -35,35 +70,27 @@ class ConverterController: UIViewController {
         let newController = storyboard?.instantiateViewController(withIdentifier: "selectedCurrencyNSID") as! UINavigationController
         (newController.viewControllers[0] as! SelectCurrencyController).flagCurrency = .to
         newController.modalPresentationStyle = .fullScreen
+        
         present(newController, animated: true)
-    }
-    
-    @IBAction func pushDoneAction(_ sender: Any) {
-        textFrom.resignFirstResponder()
-        navigationItem.rightBarButtonItem = nil
-    }
-    
-    @IBAction func textFromEditingChange(_ sender: Any) {
-        let amount = Double(textFrom.text!)
-        textTo.text = Model.shared.convert(amount: amount)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        refreshButtons()
-        textFromEditingChange(self)
-        labelCoursesForDate.text = "Курсы на \(Model.shared.currentDate)"
-        navigationItem.rightBarButtonItem = nil
-    }
-    
-    func refreshButtons() {
-        buttonFrom.setTitle(Model.shared.fromCurrency.charCode, for: .normal)
-        buttonTo.setTitle(Model.shared.toCurrency.charCode, for: .normal)
     }
 }
 
-extension ConverterController: UITextFieldDelegate {
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        navigationItem.rightBarButtonItem = buttonDone
-        return true
+// MARK: - Extension
+
+extension UITextField {
+    
+    func addDoneButton(title: String, target: Any, selector: Selector) {
+        // Add the Done button above the keyboard (Text Field).
+        let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0,
+                                              width: UIScreen.main.bounds.size.width,
+                                              height: 44.0))
+        toolBar.barTintColor = #colorLiteral(red: 0.1215686275, green: 0.1215686275, blue: 0.1215686275, alpha: 1)
+        
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let barButton = UIBarButtonItem(title: title, style: .plain, target: target, action: selector)
+        barButton.tintColor = #colorLiteral(red: 0.9607843137, green: 0.6470588235, blue: 0.2509803922, alpha: 1)
+        
+        toolBar.setItems([flexible, barButton], animated: false)
+        self.inputAccessoryView = toolBar
     }
 }

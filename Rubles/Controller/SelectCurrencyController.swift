@@ -15,14 +15,14 @@ enum FlagCurrencySelected {
 
 class SelectCurrencyController: UITableViewController {
     
+    // MARK: - Properties
+    
     var flagCurrency: FlagCurrencySelected = .from
 
+    // MARK: - General methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func pushCancelAction(_ sender: Any) {
-        dismiss(animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,6 +46,12 @@ class SelectCurrencyController: UITableViewController {
         if flagCurrency == .to {
             Model.shared.toCurrency = selectedCurrency
         }
+        dismiss(animated: true)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func pushCancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
 }

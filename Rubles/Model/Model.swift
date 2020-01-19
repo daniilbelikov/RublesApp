@@ -6,7 +6,6 @@
 //  Copyright © 2019 Daniil Belikov. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Model: NSObject {
@@ -71,6 +70,7 @@ class Model: NSObject {
                     try data?.write(to: urlForSave)
                     print("File downloaded")
                     self.parseXML()
+                    
                 } catch {
                     print("Error when save data:\(error.localizedDescription)")
                     errorGlobal = error.localizedDescription

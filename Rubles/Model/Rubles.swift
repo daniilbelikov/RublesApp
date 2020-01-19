@@ -6,7 +6,6 @@
 //  Copyright © 2019 Daniil Belikov. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Rubles {

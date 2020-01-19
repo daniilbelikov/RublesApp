@@ -27,7 +27,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHJ-US-yDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402" y="52"/>
+            <point key="canvasLocation" x="-410" y="102"/>
         </scene>
         <!--Конвертер-->
         <scene sceneID="iBU-EG-wkQ">
@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курсы на дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Woq-3c-Hdx">
-                                <rect key="frame" x="16" y="178" width="343" height="33"/>
+                                <rect key="frame" x="16" y="174" width="343" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Woq-3c-Hdx" secondAttribute="height" multiplier="12:1" constant="-53" id="NjH-gf-efN"/>
                                 </constraints>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-FT-KUt">
-                                <rect key="frame" x="16" y="230" width="147.5" height="40"/>
+                                <rect key="frame" x="16" y="226" width="147.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oEZ-FT-KUt" secondAttribute="height" multiplier="122:33" constant="-1" id="lCy-gu-xER"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-Es-am4">
-                                <rect key="frame" x="210" y="230" width="149" height="40"/>
+                                <rect key="frame" x="210" y="226" width="149" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rjy-Es-am4" secondAttribute="height" multiplier="40:11" constant="3" id="tSR-nV-Mrw"/>
                                 </constraints>
@@ -73,32 +73,32 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сумма" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="aC1-qC-IVr">
-                                <rect key="frame" x="16" y="281" width="148.5" height="30"/>
+                                <rect key="frame" x="16" y="277" width="148.5" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="j7T-Ra-eL7"/>
                                 </constraints>
                                 <color key="textColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
                                     <action selector="textFromEditingChange:" destination="K4p-sm-A2g" eventType="editingChanged" id="Ji5-Jf-gtz"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-Qt-Mgr">
-                                <rect key="frame" x="211" y="281" width="148" height="30"/>
+                                <rect key="frame" x="211" y="277" width="148" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QZI-8e-6C6"/>
                                 </constraints>
                                 <color key="textColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажмите на RUR, чтобы выбрать валюту." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cye-PE-YGk">
-                                <rect key="frame" x="16" y="331.5" width="343" height="21"/>
+                                <rect key="frame" x="16" y="327.5" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cye-PE-YGk" secondAttribute="height" multiplier="144:7" constant="-89.000000000000057" id="daL-2Z-u8J"/>
                                 </constraints>
@@ -107,13 +107,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="→" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTC-nz-GWM">
-                                <rect key="frame" x="170.5" y="225" width="32.5" height="49"/>
+                                <rect key="frame" x="170.5" y="221" width="32.5" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="→" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b46-rC-Mac">
-                                <rect key="frame" x="171.5" y="275" width="32.5" height="42"/>
+                                <rect key="frame" x="171.5" y="271" width="32.5" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32.5" id="hLz-lh-vPI"/>
                                     <constraint firstAttribute="height" constant="42" id="nKC-cU-4Ca"/>
@@ -137,7 +137,7 @@
                             <constraint firstItem="Woq-3c-Hdx" firstAttribute="centerX" secondItem="hpW-vj-XbX" secondAttribute="centerX" id="TAt-YR-HHT"/>
                             <constraint firstItem="06k-h6-Xp3" firstAttribute="trailing" secondItem="rjy-Es-am4" secondAttribute="trailing" constant="16" id="Tbj-v9-GLs"/>
                             <constraint firstItem="aC1-qC-IVr" firstAttribute="top" secondItem="oEZ-FT-KUt" secondAttribute="bottom" constant="11" id="Toy-HX-eEY"/>
-                            <constraint firstItem="Woq-3c-Hdx" firstAttribute="centerY" secondItem="hpW-vj-XbX" secondAttribute="centerY" constant="-92.5" id="YjZ-8M-U1x"/>
+                            <constraint firstItem="Woq-3c-Hdx" firstAttribute="centerY" secondItem="hpW-vj-XbX" secondAttribute="centerY" constant="-96.5" id="YjZ-8M-U1x"/>
                             <constraint firstItem="ymb-Qt-Mgr" firstAttribute="leading" secondItem="b46-rC-Mac" secondAttribute="trailing" constant="7" id="Zvg-aZ-ktu"/>
                             <constraint firstItem="cye-PE-YGk" firstAttribute="leading" secondItem="06k-h6-Xp3" secondAttribute="leading" constant="16" id="dVV-Ld-5Rq"/>
                             <constraint firstItem="oEZ-FT-KUt" firstAttribute="top" secondItem="Woq-3c-Hdx" secondAttribute="bottom" constant="19" id="g2D-Ya-0uF"/>
@@ -221,7 +221,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZX-RC-UVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2982" y="466"/>
+            <point key="canvasLocation" x="1338" y="1152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V1e-CW-M21">
@@ -244,7 +244,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcP-yb-efU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2153" y="466"/>
+            <point key="canvasLocation" x="401" y="1152"/>
         </scene>
         <!--Выберите дату-->
         <scene sceneID="Dz2-G3-RRl">
@@ -266,7 +266,7 @@
                                 <locale key="locale" localeIdentifier="ru"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an5-U2-mnT">
-                                <rect key="frame" x="100" y="380" width="175" height="42"/>
+                                <rect key="frame" x="80" y="380" width="215" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="hbA-M4-ukr"/>
@@ -276,14 +276,14 @@
                                     <color key="titleColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushShowCourses:" destination="xvE-2W-mjw" eventType="touchUpInside" id="i5J-nX-8cp"/>
+                                    <action selector="pushShowAction:" destination="xvE-2W-mjw" eventType="touchUpInside" id="i5J-nX-8cp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="an5-U2-mnT" firstAttribute="leading" secondItem="pfl-1g-fCk" secondAttribute="leading" constant="100" id="1vv-Pg-QhR"/>
-                            <constraint firstItem="an5-U2-mnT" firstAttribute="trailing" secondItem="pfl-1g-fCk" secondAttribute="trailing" constant="-100" id="PHi-86-p64"/>
+                            <constraint firstItem="an5-U2-mnT" firstAttribute="leading" secondItem="pfl-1g-fCk" secondAttribute="leading" constant="80" id="1vv-Pg-QhR"/>
+                            <constraint firstItem="an5-U2-mnT" firstAttribute="trailing" secondItem="pfl-1g-fCk" secondAttribute="trailing" constant="-80" id="PHi-86-p64"/>
                             <constraint firstItem="HWn-RD-hAG" firstAttribute="centerX" secondItem="f4Q-Kf-fmd" secondAttribute="centerX" id="czE-eC-30c"/>
                             <constraint firstItem="HWn-RD-hAG" firstAttribute="width" secondItem="f4Q-Kf-fmd" secondAttribute="width" id="phg-S1-8PS"/>
                             <constraint firstItem="an5-U2-mnT" firstAttribute="top" secondItem="HWn-RD-hAG" secondAttribute="bottom" constant="13.5" id="v0z-wD-rUc"/>
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fez-2e-jHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2149.5999999999999" y="-917.99100449775119"/>
+            <point key="canvasLocation" x="2982" y="-216"/>
         </scene>
         <!--Курсы валют-->
         <scene sceneID="4g8-qe-9bk">
@@ -473,7 +473,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7l-GG-hi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-917"/>
+            <point key="canvasLocation" x="2153" y="-216"/>
         </scene>
     </scenes>
     <resources>
