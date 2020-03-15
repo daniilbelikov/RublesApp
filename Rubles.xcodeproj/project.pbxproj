@@ -141,7 +141,7 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		6B4C1CC12349D7E000B3638C /* SupportingFiles */ = {
+		6B4C1CC12349D7E000B3638C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				6BFE19352343C7D7005FE8F7 /* CountryFlags */,
@@ -150,7 +150,7 @@
 				6BA357C922A820B100F2436A /* Info.plist */,
 				6BA357CF22A8212B00F2436A /* data.xml */,
 			);
-			path = SupportingFiles;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6B5D7E6F23D0D0B600E6A81D /* Images */ = {
@@ -181,10 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				6B0C636423CF7BF300734A71 /* AppDelegate */,
-				6BFE8A7C233A7A0F00316F10 /* Model */,
-				6BFE8A7D233A7A2800316F10 /* View */,
-				6BFE8A7E233A7A3600316F10 /* Controller */,
-				6B4C1CC12349D7E000B3638C /* SupportingFiles */,
+				6BFE8A7C233A7A0F00316F10 /* Models */,
+				6BFE8A7D233A7A2800316F10 /* Views */,
+				6BFE8A7E233A7A3600316F10 /* Controllers */,
+				6B4C1CC12349D7E000B3638C /* Resources */,
 			);
 			path = Rubles;
 			sourceTree = "<group>";
@@ -237,26 +237,26 @@
 			path = CountryFlags;
 			sourceTree = "<group>";
 		};
-		6BFE8A7C233A7A0F00316F10 /* Model */ = {
+		6BFE8A7C233A7A0F00316F10 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				6B0C636223CF6D6800734A71 /* Rubles.swift */,
 				6BA357D122A8217A00F2436A /* Model.swift */,
 				6BA357DF22B7767A00F2436A /* CourseCell.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		6BFE8A7D233A7A2800316F10 /* View */ = {
+		6BFE8A7D233A7A2800316F10 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				6BA357C122A820AA00F2436A /* Main.storyboard */,
 				6BA357C622A820B100F2436A /* LaunchScreen.storyboard */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		6BFE8A7E233A7A3600316F10 /* Controller */ = {
+		6BFE8A7E233A7A3600316F10 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6BA357D322AE44E100F2436A /* CourseController.swift */,
@@ -264,7 +264,7 @@
 				6BA357D922B286AF00F2436A /* ConverterController.swift */,
 				6BA357DB22B3951F00F2436A /* SelectCurrencyController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,7 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = NPAVBCC9N8;
-				INFOPLIST_FILE = "$(SRCROOT)/Rubles/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Rubles/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,7 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = NPAVBCC9N8;
-				INFOPLIST_FILE = "$(SRCROOT)/Rubles/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Rubles/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

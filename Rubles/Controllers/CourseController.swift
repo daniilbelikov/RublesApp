@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 class CourseController: UITableViewController {
     
-    // MARK: - General methods
-    
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,8 +69,7 @@ class CourseController: UITableViewController {
         return cell
     }
     
-    // MARK: - Action
-    
+    // MARK: - IB Action
     @IBAction func pushRefreshAction(_ sender: Any) {
         Model.shared.loadXMLFile(date: nil)
     }

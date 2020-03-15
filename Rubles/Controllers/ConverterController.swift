@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 class ConverterController: UIViewController {
     
-    // MARK: - Outlets
-    
+    // MARK: - IB Outlets
     @IBOutlet weak var labelCoursesForDate: UILabel!
     @IBOutlet weak var buttonDone: UIBarButtonItem!
     
@@ -21,8 +21,7 @@ class ConverterController: UIViewController {
     @IBOutlet weak var textFrom: UITextField!
     @IBOutlet weak var textTo: UITextField!
     
-    // MARK: - General methods
-    
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,22 +36,7 @@ class ConverterController: UIViewController {
         textFromEditingChange(self)
     }
     
-    @objc func tapDone(sender: Any) {
-        self.view.endEditing(true)
-    }
-    
-    private func refreshButton() {
-        buttonFrom.setTitle(Model.shared.fromCurrency.charCode, for: .normal)
-        buttonTo.setTitle(Model.shared.toCurrency.charCode, for: .normal)
-    }
-    
-    private func configureAll() {
-        labelCoursesForDate.text = "Курсы на \(Model.shared.currentDate)"
-        navigationItem.rightBarButtonItem = nil
-    }
-    
-    // MARK: - Actions
-    
+    // MARK: - IB Actions
     @IBAction func textFromEditingChange(_ sender: Any) {
         let amount = Double(textFrom.text!)
         textTo.text = Model.shared.convert(amount: amount)
@@ -73,10 +57,25 @@ class ConverterController: UIViewController {
         
         present(newController, animated: true)
     }
+    
+    // MARK: - Public Methods
+    @objc func tapDone(sender: Any) {
+        self.view.endEditing(true)
+    }
+    
+    // MARK: - Private Methods
+    private func refreshButton() {
+        buttonFrom.setTitle(Model.shared.fromCurrency.charCode, for: .normal)
+        buttonTo.setTitle(Model.shared.toCurrency.charCode, for: .normal)
+    }
+    
+    private func configureAll() {
+        labelCoursesForDate.text = "Курсы на \(Model.shared.currentDate)"
+        navigationItem.rightBarButtonItem = nil
+    }
 }
 
 // MARK: - Extension
-
 extension UITextField {
     
     func addDoneButton(title: String, target: Any, selector: Selector) {

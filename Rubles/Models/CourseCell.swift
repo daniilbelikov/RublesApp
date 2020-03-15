@@ -7,25 +7,21 @@
 //
 
 import UIKit
+import Foundation
 
 class CourseCell: UITableViewCell {
     
-    // MARK: - Outlets
-    
+    // MARK: - IB Outlets
     @IBOutlet weak var imageFlag: UIImageView!
     @IBOutlet weak var labelCurrencyName: UILabel!
     @IBOutlet weak var labelCourse: UILabel!
     
-    // MARK: - General methods
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
+    // MARK: - Life Cycles Method
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Public Method
     func initCell(currency: Rubles) {
         let labelCourseText = currency.valueDouble! / currency.nominalDouble!
         let transition = labelCourseText

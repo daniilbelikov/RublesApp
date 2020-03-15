@@ -7,29 +7,21 @@
 //
 
 import UIKit
+import Foundation
 
 class SettingsController: UIViewController {
     
-    // MARK: - Outlets
-    
+    // MARK: - IB Outlets
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var showCourses: UIButton!
     
-    // MARK: - General methods
-    
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureObjects()
     }
     
-    private func configureObjects() {
-        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
-        datePicker.setValue(false, forKeyPath: "highlightsToday")
-        showCourses.layer.cornerRadius = 10
-    }
-    
-    // MARK: - Actions
-    
+    // MARK: - IB Actions
     @IBAction func pushCancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -37,5 +29,12 @@ class SettingsController: UIViewController {
     @IBAction func pushShowAction(_ sender: Any) {
         Model.shared.loadXMLFile(date: datePicker.date)
         dismiss(animated: true)
+    }
+    
+    // MARK: - Private Method
+    private func configureObjects() {
+        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.setValue(false, forKeyPath: "highlightsToday")
+        showCourses.layer.cornerRadius = 10
     }
 }

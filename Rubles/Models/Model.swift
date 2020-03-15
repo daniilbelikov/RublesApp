@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 class Model: NSObject {
     
-    // MARK: - Properties
+    // MARK: - Public Properties
     static let shared = Model()
     
     var currencies: [Rubles] = []
@@ -35,8 +36,7 @@ class Model: NSObject {
         return URL(fileURLWithPath: pathForXML)
     }
     
-    // MARK: - General methods
-    
+    // MARK: - Public Methods
     func convert(amount: Double?) -> String {
         if amount == nil {
             return ""
@@ -111,7 +111,6 @@ class Model: NSObject {
 }
 
 // MARK: - Extension
-
 extension Model: XMLParserDelegate {
     
     func parser(_ parser: XMLParser,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 enum FlagCurrencySelected {
     case from
@@ -15,16 +16,10 @@ enum FlagCurrencySelected {
 
 class SelectCurrencyController: UITableViewController {
     
-    // MARK: - Properties
-    
+    // MARK: - Public Properties
     var flagCurrency: FlagCurrencySelected = .from
 
-    // MARK: - General methods
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    // MARK: - Life Cycles Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Model.shared.currencies.count
     }
@@ -33,6 +28,7 @@ class SelectCurrencyController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let currentCurrency: Rubles = Model.shared.currencies[indexPath.row]
         cell.textLabel?.text = currentCurrency.name
+        
         return cell
     }
     
@@ -49,8 +45,7 @@ class SelectCurrencyController: UITableViewController {
         dismiss(animated: true)
     }
     
-    // MARK: - Actions
-    
+    // MARK: - IB Action
     @IBAction func pushCancelAction(_ sender: Any) {
         dismiss(animated: true)
     }
