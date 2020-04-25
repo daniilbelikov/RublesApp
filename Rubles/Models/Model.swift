@@ -12,6 +12,7 @@ import Foundation
 class Model: NSObject {
     
     // MARK: - Public Properties
+    
     static let shared = Model()
     
     var currencies: [Rubles] = []
@@ -37,10 +38,12 @@ class Model: NSObject {
     }
     
     // MARK: - Public Methods
+    
     func convert(amount: Double?) -> String {
         if amount == nil {
             return ""
         }
+        
         let result = ((fromCurrency.nominalDouble! * fromCurrency.valueDouble!) /
             (toCurrency.valueDouble! / toCurrency.nominalDouble!)) * amount!
         
@@ -103,6 +106,7 @@ class Model: NSObject {
             if value.charCode == fromCurrency.charCode {
                 fromCurrency = value
             }
+            
             if value.charCode == toCurrency.charCode {
                 toCurrency = value
             }
@@ -110,7 +114,8 @@ class Model: NSObject {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extensions
+
 extension Model: XMLParserDelegate {
     
     func parser(_ parser: XMLParser,

@@ -17,9 +17,11 @@ enum FlagCurrencySelected {
 class SelectCurrencyController: UITableViewController {
     
     // MARK: - Public Properties
+    
     var flagCurrency: FlagCurrencySelected = .from
 
     // MARK: - Life Cycles Methods
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Model.shared.currencies.count
     }

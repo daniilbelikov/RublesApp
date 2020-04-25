@@ -11,17 +11,20 @@ import Foundation
 
 class CourseCell: UITableViewCell {
     
-    // MARK: - IB Outlets
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var imageFlag: UIImageView!
     @IBOutlet weak var labelCurrencyName: UILabel!
     @IBOutlet weak var labelCourse: UILabel!
     
-    // MARK: - Life Cycles Method
+    // MARK: - Life Cycles Methods
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    // MARK: - Public Method
+    // MARK: - Public Methods
+    
     func initCell(currency: Rubles) {
         let labelCourseText = currency.valueDouble! / currency.nominalDouble!
         let transition = labelCourseText

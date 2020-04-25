@@ -147,8 +147,8 @@
 				6BFE19352343C7D7005FE8F7 /* CountryFlags */,
 				6B5D7E6F23D0D0B600E6A81D /* Images */,
 				6BA358C622BAAAD300F2436A /* Assets.xcassets */,
-				6BA357C922A820B100F2436A /* Info.plist */,
 				6BA357CF22A8212B00F2436A /* data.xml */,
+				6BA357C922A820B100F2436A /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,6 +159,15 @@
 				6BDF2CC92328E52900E6A4AC /* Default-568h@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		6BA1B33124549D7E00DD94B4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6BA357C122A820AA00F2436A /* Main.storyboard */,
+				6BA357C622A820B100F2436A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		6BA357B122A820AA00F2436A = {
@@ -181,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				6B0C636423CF7BF300734A71 /* AppDelegate */,
+				6BA1B33124549D7E00DD94B4 /* Storyboards */,
 				6BFE8A7C233A7A0F00316F10 /* Models */,
 				6BFE8A7D233A7A2800316F10 /* Views */,
 				6BFE8A7E233A7A3600316F10 /* Controllers */,
@@ -242,7 +252,6 @@
 			children = (
 				6B0C636223CF6D6800734A71 /* Rubles.swift */,
 				6BA357D122A8217A00F2436A /* Model.swift */,
-				6BA357DF22B7767A00F2436A /* CourseCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,8 +259,7 @@
 		6BFE8A7D233A7A2800316F10 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6BA357C122A820AA00F2436A /* Main.storyboard */,
-				6BA357C622A820B100F2436A /* LaunchScreen.storyboard */,
+				6BA357DF22B7767A00F2436A /* CourseCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -535,7 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = NPAVBCC9N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Rubles/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -543,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pvt.belikov.com.CurrencyCourses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -556,7 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = NPAVBCC9N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Rubles/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -564,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pvt.belikov.com.CurrencyCourses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

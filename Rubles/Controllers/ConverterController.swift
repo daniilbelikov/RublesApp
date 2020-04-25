@@ -11,7 +11,8 @@ import Foundation
 
 class ConverterController: UIViewController {
     
-    // MARK: - IB Outlets
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var labelCoursesForDate: UILabel!
     @IBOutlet weak var buttonDone: UIBarButtonItem!
     
@@ -22,6 +23,7 @@ class ConverterController: UIViewController {
     @IBOutlet weak var textTo: UITextField!
     
     // MARK: - Life Cycles Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +38,8 @@ class ConverterController: UIViewController {
         textFromEditingChange(self)
     }
     
-    // MARK: - IB Actions
+    // MARK: - IBActions
+    
     @IBAction func textFromEditingChange(_ sender: Any) {
         let amount = Double(textFrom.text!)
         textTo.text = Model.shared.convert(amount: amount)
@@ -59,11 +62,13 @@ class ConverterController: UIViewController {
     }
     
     // MARK: - Public Methods
+    
     @objc func tapDone(sender: Any) {
         self.view.endEditing(true)
     }
     
     // MARK: - Private Methods
+    
     private func refreshButton() {
         buttonFrom.setTitle(Model.shared.fromCurrency.charCode, for: .normal)
         buttonTo.setTitle(Model.shared.toCurrency.charCode, for: .normal)
@@ -75,7 +80,8 @@ class ConverterController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extensions
+
 extension UITextField {
     
     func addDoneButton(title: String, target: Any, selector: Selector) {
