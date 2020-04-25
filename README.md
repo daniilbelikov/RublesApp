@@ -5,4 +5,4 @@ Technology Stack: Xcode, Swift, MVC, UIKit, parse XML.
 
 # Screenshots:
 
-<img src="./Assets/main1.png" width="285" /> <img src="./Assets/date1.png" width="285" /> <img src="./Assets/converter1.png" width="285"/>
+<img src="./assets/main1.png" width="285" /> <img src="./assets/date1.png" width="285" /> <img src="./assets/converter1.png" width="285"/>
