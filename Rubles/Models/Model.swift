@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 class Model: NSObject {
     
@@ -17,10 +16,8 @@ class Model: NSObject {
     
     var currencies: [Rubles] = []
     var currentDate: String = ""
-    
     var fromCurrency: Rubles = Rubles.myRuble()
     var toCurrency: Rubles = Rubles.myRuble()
-    
     var currentCharacters: String = ""
     var currentCurrency: Rubles?
     
@@ -73,12 +70,10 @@ class Model: NSObject {
                     try data?.write(to: urlForSave)
                     print("File downloaded")
                     self.parseXML()
-                    
                 } catch {
                     print("Error when save data:\(error.localizedDescription)")
                     errorGlobal = error.localizedDescription
                 }
-                
             } else {
                 print("Error when save loadXMLFile:" + error!.localizedDescription)
                 errorGlobal = error?.localizedDescription
@@ -112,6 +107,7 @@ class Model: NSObject {
             }
         }
     }
+    
 }
 
 // MARK: - Extensions
@@ -135,7 +131,9 @@ extension Model: XMLParserDelegate {
         }
     }
     
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(_ parser: XMLParser, didEndElement elementName: String,
+                namespaceURI: String?, qualifiedName qName: String?) {
+        
         if elementName == "NumCode" {
             currentCurrency?.numCode = currentCharacters
         }
@@ -166,4 +164,5 @@ extension Model: XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         currentCharacters = string
     }
+    
 }

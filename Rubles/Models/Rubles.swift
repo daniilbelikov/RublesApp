@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import Foundation
 
 class Rubles {
     
     // MARK: - Public Properties
     
-    // Create a data model that defines the characteristics of the currency.
     var numCode: String?
     var charCode: String?
     var nominal: String?
@@ -23,18 +21,15 @@ class Rubles {
     var valueDouble: Double?
     
     var imageFlag: UIImage? {
-        
         if let charcodeOne = charCode {
             return UIImage(named: charcodeOne + ".png")
         }
-        
         return nil
     }
     
     // MARK: - Public Methods
     
     class func myRuble() -> Rubles {
-        // Determine the ruble currency, which is necessary to calculate the exchange rate of other currencies.
         let ruble = Rubles()
         ruble.charCode = "RUR"
         ruble.name = "Российский рубль"
@@ -45,4 +40,5 @@ class Rubles {
         
         return ruble
     }
+    
 }

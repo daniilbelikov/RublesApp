@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 class CourseController: UITableViewController {
     
@@ -16,6 +15,26 @@ class CourseController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = Model.shared.currentDate
+        Model.shared.loadXMLFile(date: nil)
+        setObservers()
+    }
+    
+    // MARK: - Public Methods
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Model.shared.currencies.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CourseCell
+        let courseForCell = Model.shared.currencies[indexPath.row]
+        cell.initCell(currency: courseForCell)
+        
+        return cell
+    }
+    
+    func setObservers() {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "startLoadingXML"),
                                                object: nil, queue: nil) { (notification) in
                                                 
@@ -55,20 +74,6 @@ class CourseController: UITableViewController {
                                                     self.navigationItem.rightBarButtonItem = barButtonItem
                                                 }
         }
-        navigationItem.title = Model.shared.currentDate
-        Model.shared.loadXMLFile(date: nil)
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Model.shared.currencies.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CourseCell
-        let courseForCell = Model.shared.currencies[indexPath.row]
-        cell.initCell(currency: courseForCell)
-        
-        return cell
     }
     
     // MARK: - IBActions
@@ -76,4 +81,5 @@ class CourseController: UITableViewController {
     @IBAction func pushRefreshAction(_ sender: Any) {
         Model.shared.loadXMLFile(date: nil)
     }
+    
 }

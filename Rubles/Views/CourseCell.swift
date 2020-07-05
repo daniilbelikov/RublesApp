@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 class CourseCell: UITableViewCell {
     
@@ -17,13 +16,11 @@ class CourseCell: UITableViewCell {
     @IBOutlet weak var labelCurrencyName: UILabel!
     @IBOutlet weak var labelCourse: UILabel!
     
-    // MARK: - Life Cycles Methods
+    // MARK: - Public Methods
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-    // MARK: - Public Methods
     
     func initCell(currency: Rubles) {
         let labelCourseText = currency.valueDouble! / currency.nominalDouble!
@@ -33,4 +30,5 @@ class CourseCell: UITableViewCell {
         labelCurrencyName.text = currency.name
         labelCourse.text = String(round(transition * 1000) / 1000)
     }
+    
 }

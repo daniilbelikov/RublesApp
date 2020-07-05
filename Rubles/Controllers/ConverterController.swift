@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 class ConverterController: UIViewController {
     
@@ -15,10 +14,8 @@ class ConverterController: UIViewController {
     
     @IBOutlet weak var labelCoursesForDate: UILabel!
     @IBOutlet weak var buttonDone: UIBarButtonItem!
-    
     @IBOutlet weak var buttonFrom: UIButton!
     @IBOutlet weak var buttonTo: UIButton!
-    
     @IBOutlet weak var textFrom: UITextField!
     @IBOutlet weak var textTo: UITextField!
     
@@ -26,16 +23,38 @@ class ConverterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.textFrom.addDoneButton(title: "Готово",
-                                    target: self,
-                                    selector: #selector(tapDone(sender:)))
+        configureDoneButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         refreshButton()
         configureAll()
         textFromEditingChange(self)
+    }
+    
+    // MARK: - Public Methods
+    
+    func configureDoneButton() {
+        self.textFrom.addDoneButton(title: "Готово",
+                                    target: self,
+                                    selector: #selector(tapDone(sender:)))
+    }
+    
+    @objc
+    func tapDone(sender: Any) {
+        self.view.endEditing(true)
+    }
+    
+    // MARK: - Private Methods
+    
+    private func refreshButton() {
+        buttonFrom.setTitle(Model.shared.fromCurrency.charCode, for: .normal)
+        buttonTo.setTitle(Model.shared.toCurrency.charCode, for: .normal)
+    }
+    
+    private func configureAll() {
+        labelCoursesForDate.text = "Курсы на \(Model.shared.currentDate)"
+        navigationItem.rightBarButtonItem = nil
     }
     
     // MARK: - IBActions
@@ -61,41 +80,4 @@ class ConverterController: UIViewController {
         present(newController, animated: true)
     }
     
-    // MARK: - Public Methods
-    
-    @objc func tapDone(sender: Any) {
-        self.view.endEditing(true)
-    }
-    
-    // MARK: - Private Methods
-    
-    private func refreshButton() {
-        buttonFrom.setTitle(Model.shared.fromCurrency.charCode, for: .normal)
-        buttonTo.setTitle(Model.shared.toCurrency.charCode, for: .normal)
-    }
-    
-    private func configureAll() {
-        labelCoursesForDate.text = "Курсы на \(Model.shared.currentDate)"
-        navigationItem.rightBarButtonItem = nil
-    }
-}
-
-// MARK: - Extensions
-
-extension UITextField {
-    
-    func addDoneButton(title: String, target: Any, selector: Selector) {
-        // Add the Done button above the keyboard (Text Field).
-        let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0,
-                                              width: UIScreen.main.bounds.size.width,
-                                              height: 44.0))
-        toolBar.barTintColor = #colorLiteral(red: 0.1215686275, green: 0.1215686275, blue: 0.1215686275, alpha: 1)
-        
-        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let barButton = UIBarButtonItem(title: title, style: .plain, target: target, action: selector)
-        barButton.tintColor = #colorLiteral(red: 0.9607843137, green: 0.6470588235, blue: 0.2509803922, alpha: 1)
-        
-        toolBar.setItems([flexible, barButton], animated: false)
-        self.inputAccessoryView = toolBar
-    }
 }

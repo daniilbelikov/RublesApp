@@ -18,4 +18,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Model.shared.parseXML()
         return true
     }
+    
 }
