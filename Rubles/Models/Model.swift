@@ -56,8 +56,8 @@ class Model: NSObject {
             stringURL = stringURL + dateFormatter.string(from: date!)
         }
         
-        let url = URL(string: stringURL)
-        let task = URLSession.shared.dataTask(with: url!) { (data, responce, error) in
+        guard let url = URL(string: stringURL) else { return }
+        let task = URLSession.shared.dataTask(with: url) { data, responce, error in
             
             var errorGlobal: String?
             
