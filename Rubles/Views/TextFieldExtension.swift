@@ -26,6 +26,7 @@ extension UITextField {
         barButton.tintColor = #colorLiteral(red: 0.9607843137, green: 0.6470588235, blue: 0.2509803922, alpha: 1)
         
         toolBar.setItems([flexible, barButton], animated: false)
+        
         self.inputAccessoryView = toolBar
     }
     

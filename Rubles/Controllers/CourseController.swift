@@ -14,7 +14,6 @@ class CourseController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = Model.shared.currentDate
         Model.shared.loadXMLFile(date: nil)
         setObservers()

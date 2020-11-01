@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NNt-Bl-9Z2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NNt-Bl-9Z2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +47,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-FT-KUt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-FT-KUt">
                                 <rect key="frame" x="16" y="226" width="147.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oEZ-FT-KUt" secondAttribute="height" multiplier="122:33" constant="-1" id="lCy-gu-xER"/>
@@ -59,7 +60,7 @@
                                     <action selector="pushFromAction:" destination="K4p-sm-A2g" eventType="touchUpInside" id="Beb-5P-ABn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-Es-am4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-Es-am4">
                                 <rect key="frame" x="210" y="226" width="149" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rjy-Es-am4" secondAttribute="height" multiplier="40:11" constant="3" id="tSR-nV-Mrw"/>
@@ -123,6 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="06k-h6-Xp3"/>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cye-PE-YGk" firstAttribute="top" secondItem="aC1-qC-IVr" secondAttribute="bottom" constant="20.5" id="5Dg-5w-GZu"/>
@@ -149,7 +151,6 @@
                             <constraint firstItem="aC1-qC-IVr" firstAttribute="leading" secondItem="06k-h6-Xp3" secondAttribute="leading" constant="16" id="zxb-t0-6ZH"/>
                             <constraint firstItem="06k-h6-Xp3" firstAttribute="trailing" secondItem="cye-PE-YGk" secondAttribute="trailing" constant="16" id="zxe-Jy-0yN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="06k-h6-Xp3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Конвертер" id="TtJ-6M-0TL"/>
                     <connections>
@@ -180,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="separatorColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="separatorColor" systemColor="scrollViewTexturedBackgroundColor"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -254,7 +255,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker opaque="NO" contentMode="center" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="HWn-RD-hAG">
+                            <datePicker opaque="NO" contentMode="center" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="HWn-RD-hAG">
                                 <rect key="frame" x="0.0" y="108.5" width="375" height="258"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -265,7 +266,7 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="ru"/>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an5-U2-mnT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an5-U2-mnT">
                                 <rect key="frame" x="80" y="380" width="215" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -280,6 +281,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="pfl-1g-fCk"/>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="an5-U2-mnT" firstAttribute="leading" secondItem="pfl-1g-fCk" secondAttribute="leading" constant="80" id="1vv-Pg-QhR"/>
@@ -289,7 +291,6 @@
                             <constraint firstItem="an5-U2-mnT" firstAttribute="top" secondItem="HWn-RD-hAG" secondAttribute="bottom" constant="13.5" id="v0z-wD-rUc"/>
                             <constraint firstItem="HWn-RD-hAG" firstAttribute="centerY" secondItem="f4Q-Kf-fmd" secondAttribute="centerY" constant="-58" id="vi6-vH-YJj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pfl-1g-fCk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Выберите дату" id="j3j-6g-gxz">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="CRf-An-eT2">
@@ -317,7 +318,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="separatorColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="separatorColor" systemColor="scrollViewTexturedBackgroundColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -371,7 +372,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="imageFlag" destination="wEW-Md-CsE" id="9cp-H0-y66"/>
@@ -485,5 +486,14 @@
     <resources>
         <image name="tab1" width="30" height="30"/>
         <image name="tab2" width="30" height="30"/>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705878" green="0.44313725490196082" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705878" green="0.44313725490196082" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

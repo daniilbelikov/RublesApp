@@ -29,7 +29,6 @@ class SelectCurrencyController: UITableViewController {
     
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let currentCurrency: Rubles = Model.shared.currencies[indexPath.row]
         cell.textLabel?.text = currentCurrency.name
@@ -39,7 +38,6 @@ class SelectCurrencyController: UITableViewController {
     
     override func tableView(_ tableView: UITableView,
                             didSelectRowAt indexPath: IndexPath) {
-        
         let selectedCurrency: Rubles = Model.shared.currencies[indexPath.row]
         
         if flagCurrency == .from {
